@@ -169,6 +169,7 @@
                         checktype="c5"
                         value=""
                         placeholder=""
+                        id="Email"
                     /></span>
                     <p
                       id="Email_error"
@@ -397,5 +398,19 @@
       var isSalesIQIntegrationEnabled = false;
       var salesIQFieldsArray = [];
     </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script>
+        window.addEventListener('message', function (event) {
+          var email = event.data;
+          document.getElementById("Email").value = email;
+          let checkField = setInterval(function () {
+            if ($('#Email').val() !== '') {
+              $('#loader').hide();
+              clearInterval(checkField);
+            }
+          }, 100);
+          $('#loader').hide();
+        });
+      </script>
   </body>
 </html>
