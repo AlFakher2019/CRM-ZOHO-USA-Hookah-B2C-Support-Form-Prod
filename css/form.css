@@ -87,7 +87,6 @@ body {
   color: #101114;
   font-family: "Lato", serif;
   margin: 0 auto;
-  padding: 0px 2rem;
 }
 
 input,
@@ -728,7 +727,7 @@ select:focus-visible {
 .zf-fmFooter .zf-submitColor {
   font-family: "Poppins", serif;
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 13px 36px;
   font-weight: 600;
 }
 
