@@ -194,10 +194,6 @@ ul {
 } */
 
 .zf-templateWidth {
-  margin: 1% auto;
-}
-
-.zf-templateWidth {
   width: 100%;
 }
 
@@ -299,7 +295,7 @@ select:focus-visible {
 }
 
 .zf-tempHeadContBdr {
-  margin: 15px 0px;
+  margin-bottom: 15px;
 }
 
 .zf-tempHeadContBdr .zf-frmTitle {
