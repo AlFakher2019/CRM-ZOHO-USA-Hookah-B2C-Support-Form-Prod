@@ -85,7 +85,7 @@ video {
 body {
   background-attachment: fixed;
   color: #101114;
-  font-family: "Lato", serif;
+  font-family: "Public Sans", sans-serif;
   margin: 0 auto;
 }
 
@@ -304,7 +304,7 @@ select:focus-visible {
   padding: 0;
   font-size: 1em;
   font-weight: 600;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .zf-tempHeadContBdr .zf-frmDesc {
@@ -810,8 +810,8 @@ select {
   appearance: none;
   background-image: url("https://25636661.fs1.hubspotusercontent-eu1.net/hubfs/25636661/arrow-205.svg");
   background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 1.2rem auto, 100%;
+  background-position: right 1em top 50%, 0 0;
+  background-size: 1rem auto, 100%;
 }
 
 .zf-name .zf-tempContDiv .zf-form-sBox {
@@ -1292,17 +1292,17 @@ select {
 .wid {
   width: 50%;
 }
-.main-f{
+.main-f {
   display: flex;
   flex-direction: row;
   column-gap: 24px;
 }
 .col1 {
-	width: 50%;
+  width: 50%;
 }
 
 .col2 {
-	width: 50%;
+  width: 50%;
 }
 @media only screen and (max-width: 600px) {
   .one-line {
@@ -1321,13 +1321,12 @@ select {
   .zf-subContWrap {
     margin: 20px;
   }
-  .zf-fmFooter{
+  .zf-fmFooter {
     padding: 18px 20px;
-
   }
   .zf-tempHeadContBdr {
     margin: 15px 20px;
-}
+  }
   .mess {
     margin: 20px;
   }
@@ -1345,17 +1344,17 @@ select {
   body {
     padding: 0px;
   }
-  .main-f{
+  .main-f {
     flex-direction: column;
   }
   .col1 {
-		width: 100%;
-	}
+    width: 100%;
+  }
 
-	.col2 {
-		width: 100%;
-		margin-left: 0;
-	}
+  .col2 {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 #loaderContainer {
