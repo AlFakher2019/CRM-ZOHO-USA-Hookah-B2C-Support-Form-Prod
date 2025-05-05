@@ -47,7 +47,7 @@
           <!---------template Header Starts Here---------->
           <ul class="zf-tempHeadBdr">
             <li class="zf-tempHeadContBdr">
-              <h2 class="zf-frmTitle"><em>Send us a message</em></h2>
+              <h5 class="zf-frmTitle"><em>Send us a message</em></h5>
               <p class="zf-frmDesc"></p>
               <div class="zf-clearBoth"></div>
             </li>
@@ -61,7 +61,7 @@
                 <div class="zf-tempContDiv zf-twoType">
                   <div class="zf-nameWrapper">
                     <div class="main-f">
-                      <div class="col1">
+                      <div class="col1 zf-frm-sp">
                         <label class="zf-labelName"
                           >First Name
                           <em class="zf-important">*</em>
@@ -96,7 +96,7 @@
                     class="zf-errorMessage"
                     style="display: none"
                   >
-                    Invalid value
+                    This field is required
                   </p>
                 </div>
                 <div class="zf-clearBoth"></div>
@@ -176,7 +176,7 @@
                       class="zf-errorMessage"
                       style="display: none"
                     >
-                      Invalid value
+                    This field is required
                     </p>
                   </div>
                   <div class="zf-clearBoth"></div>
@@ -227,7 +227,7 @@
                   </label>
                   <div class="zf-tempContDiv">
                     <select class="zf-form-sBox" name="Dropdown" checktype="c1">
-                      <option selected="true" value="-Select-">Select</option>
+                      <option selected="true" value="-Select-"></option>
                       <optgroup label="My Order">
                         <option value="Tracking&#x20;Information">
                           Tracking&#x20;Information
@@ -362,7 +362,7 @@
           <!---------template Container Starts Here---------->
           <ul>
             <li class="zf-fmFooter">
-              <button class="zf-submitColor">SUBMIT</button>
+              <button class="zf-submitColor" disabled>SUBMIT</button>
             </li>
           </ul>
         </div>
@@ -411,6 +411,28 @@
           }, 100);
           $('#loader').hide();
         });
+
+        const submitButton = document.querySelector(".zf-submitColor");
+        const requiredFields = [
+          "Name_First",
+          "Name_Last",
+          "Email",
+          "Dropdown",
+          "SingleLine2"
+        ];
+
+        function checkRequiredFields() {
+          const allFilled = requiredFields.every((name) => {
+            const field = document.forms["form"][name];
+            return field && field.value.trim() && field.value !== "-Select-";
+          });
+
+          submitButton.disabled = !allFilled;
+        }
+
+          document.getElementById("form").addEventListener("input", checkRequiredFields);
+          document.getElementById("form").addEventListener("change", checkRequiredFields);
+
       </script>
   </body>
 </html>
